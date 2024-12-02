@@ -84,6 +84,14 @@ body{
     object-fit: fill;
    
 }
+.grid-container .video-wrapper h2 {
+
+    color: white;
+    position: absolute;
+    padding: 1rem 2rem;
+    text-align: start;
+
+}
 .grid-container .sidebar {
     grid-area: sidebar;
     background-color: #1A1A2E; 
