@@ -10,7 +10,8 @@ body{
 
     background-color: #0D101B;
     font-family: 'Inter' ,sans-serif;
-    height: 100%;
+    height: 100vh;
+    
 
 } 
 
@@ -24,7 +25,6 @@ body{
   "thumbnail .";
   gap:15px 10px;
   padding: 40px;
-  /* max-height: 100vh;  */
  
 }
 .grid-container .filter{
@@ -79,20 +79,74 @@ body{
 .grid-container .video-wrapper{
  
     grid-area: video-wrapper;
-    background-color: bisque;
+    background-color: rgb(68, 72, 114);
 
 }
 .grid-container .video-wrapper video{
 
     height: 100%;
    width: 100%;
-   object-fit: fill;
+   object-fit: contain;
 }
-.grid-container .sidebar{
-
+.grid-container .sidebar {
     grid-area: sidebar;
-    background-color: blueviolet;
+    background-color: #1A1A2E; 
+    overflow: hidden;
+    border-radius: 10px;
 }
+.grid-container .sidebar h3 {
+       
+    color: white;
+    position: fixed;
+    padding: 1rem 2rem;
+    text-align: start;
+    font-weight: 100;
+}
+
+.grid-container .sidebar button{
+
+    /* padding: 10px; */
+    width: 100%;
+    height: 42px;
+    margin-top: 10px;
+   
+    margin-right: auto;
+    border-radius: 12px;
+    background: #FC048C;
+    border-color: #FC048C;
+    color: white;
+    font-size: 14px;
+}
+.grid-container .sidebar .card-container{
+
+    margin-top: 50px;
+    max-height: calc(70vh - 100px); 
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    padding-right: 10px; 
+    
+
+}
+.grid-container .sidebar .card-container .card{
+
+    width: 100%;
+    height: 120px;
+    background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    
+   
+}
+
+.grid-container .sidebar  .card-container .card img{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    object-fit: fill;
+} 
 .grid-container .thumbnail{
 
     grid-area: thumbnail;
