@@ -17,7 +17,8 @@ body{
   display: grid;
   grid-template-rows: auto 500px auto;
   grid-template-columns: 3fr 1fr;
-  grid-template-areas: "filter filter"
+  grid-template-areas: 
+  "filter filter"
   "video-wrapper sidebar"
   "thumbnail sidebar";
   gap:15px 10px;
@@ -189,7 +190,10 @@ body{
 }
   
 @media (max-width: 768px) {
-   
+   body{
+
+      overflow: scroll;
+   }
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
