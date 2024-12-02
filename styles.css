@@ -129,6 +129,10 @@ body{
     color: white;
     font-size: 14px;
 }
+.grid-container .sidebar button:hover{
+
+    background-color: #750040;
+}
 .grid-container .sidebar .card-container{
 
     margin-top: 20px;
