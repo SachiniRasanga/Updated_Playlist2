@@ -86,7 +86,7 @@ body{
 }
 .grid-container .video-wrapper h2 {
 
-    color: white;
+    color: rgb(255, 255, 255);
     position: absolute;
     padding: 1rem 2rem;
     text-align: start;
