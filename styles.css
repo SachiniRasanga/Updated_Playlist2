@@ -29,7 +29,7 @@ body{
 
     display: grid;
     grid-area: filter;
-    grid-template-columns:auto auto;
+    /* grid-template-columns:auto auto; */
     grid-template-rows: repeat(4,auto);
     grid-template-areas: 
     "h4 button"
@@ -216,13 +216,12 @@ body{
         white-space: nowrap; 
         overflow-x: scroll;
         max-width: 100%; 
-        text-overflow: ellipsis;
 
     }
 
-    .grid-container .filter .filter1 .header1 button{
+    .grid-container .filter .filter1 .header1 {
 
-       width:550px;
+       width:900px;
 
     }
     .grid-container .sidebar .card-container {
