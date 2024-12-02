@@ -3,22 +3,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-   
      
 }
 body{
 
     background-color: #0D101B;
     font-family: 'Inter' ,sans-serif;
-    height: 100vh;
-    
-
+    overflow: hidden;
 } 
 
 .grid-container{
-
+  
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 500px auto;
   grid-template-columns: 3fr 1fr;
   grid-template-areas: "filter filter"
   "video-wrapper sidebar"
@@ -31,7 +28,7 @@ body{
 
     display: grid;
     grid-area: filter;
-    grid-template-columns:1fr auto;
+    grid-template-columns:1fr;
     grid-template-rows: repeat(4,auto);
     grid-template-areas: 
     "h4 button"
@@ -51,8 +48,7 @@ body{
 }
 .grid-container .filter .filter1 button{
 
-    grid-area: button;
-   
+   grid-area: button;
    max-height: 62px;
    max-width: 100px;
    padding: 5px 20px;
@@ -68,7 +64,6 @@ body{
    justify-content: center;
    text-overflow: ellipsis;
    white-space: nowrap; 
-   
 }
 
 .grid-container .filter .filter1 button:hover{
@@ -85,8 +80,9 @@ body{
 .grid-container .video-wrapper video{
 
     height: 100%;
-   width: 100%;
-   object-fit: contain;
+    width: 100%;
+    object-fit: fill;
+   
 }
 .grid-container .sidebar {
     grid-area: sidebar;
@@ -105,11 +101,10 @@ body{
 
 .grid-container .sidebar button{
 
-    /* padding: 10px; */
     width: 100%;
     height: 42px;
     margin-top: 10px;
-   
+    margin-bottom: 20px;
     margin-right: auto;
     border-radius: 12px;
     background: #FC048C;
@@ -120,8 +115,8 @@ body{
 .grid-container .sidebar .card-container{
 
     margin-top: 50px;
-    max-height: calc(70vh - 100px); 
-    overflow-y: scroll; 
+    max-height: 400px;
+    overflow-y: initial; 
     overflow-x: hidden;
     padding-right: 10px; 
     
@@ -185,3 +180,27 @@ body{
     background-color: #FC048C;
 }
   
+@media (max-width: 768px) {
+   
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "filter"
+            "video-wrapper"
+            "thumbnail"
+            "sidebar";
+        gap: 20px;
+    }
+
+    .grid-container .filter .filter1 {
+        white-space: nowrap; 
+        overflow-x: scroll;
+        max-width: 100%; 
+    }
+    
+    .grid-container .sidebar .card-container {
+        overflow-y: scroll;
+        max-height: 400px; 
+    }
+}
