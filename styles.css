@@ -104,6 +104,7 @@ body{
     background-color: #1A1A2E; 
     overflow: hidden;
     border-radius: 10px;
+    padding: 0 10px;
 }
 .grid-container .sidebar h3 {
        
@@ -111,6 +112,7 @@ body{
     position: relative;
     /* padding: 1rem 2rem; */
     margin-left: 10px;
+    margin-top: 10px;
     font-weight: 100;
 }
 
