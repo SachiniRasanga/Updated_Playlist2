@@ -63,11 +63,17 @@ body{
    border: none; 
    cursor: pointer; 
    margin: 2px 0 2px 0;
-    overflow: hidden; 
-    align-items: center;
-    justify-content: center;
-    text-overflow: ellipsis;
-    white-space: nowrap; 
+   overflow: hidden; 
+   align-items: center;
+   justify-content: center;
+   text-overflow: ellipsis;
+   white-space: nowrap; 
+   
+}
+
+.grid-container .filter .filter1 button:hover{
+
+   background-color: #750040;
    
 }
 .grid-container .video-wrapper{
